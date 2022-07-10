@@ -357,6 +357,39 @@ $(document).ready(function(){
 
 /*skills*/
 $(document).ready(function(){
+
+    /*skill 팝업창*/
+    var $sk_arr = [
+        ["html.png", "HTML5", "HTML 시멘틱 마크업 및 웹 접근성 마크업 규칙에 대해서 잘 이해하고 있습니다. 웹 표준에 준수하며 반응형 레이아웃 제작이 가능합니다."],
+        ["css.png", "css5", "css의 레이아웃 구성과 스타일링 문법을 효과적으로 사용하도록 익혔고 애니메이션효과를 넣는 것을 좋아합니다."],
+        ["js.png", "Javascript / jQuery", "Javascript, Jquery의 기본 문법을 이해하고 있으며 동적 코드 작성, 오픈소스 활용 및 수정이 가능합니다."],
+        ["php.png", "Php", "MySql구조를 이해하고 php와 DB데이터를 연동하여 사용가능합니다."],
+        ["bootstrap.png", "Bootstrap", "반응형 적용 가능하며 비율에대한 이해도가 높으며 버튼의 그룹화 기능도 사용가능합니다."],
+        ["Vuejs.png", "Vue js", "DOM에대한 원리를 이해하고 router와 component를 이용한 사이트를 구축하였습니다."],
+        ["photoshop_icon.svg", "Adobe Photoshop", "웹사이트 디자인에 필요한 기본툴과 보정작업을 위한 효과들을 자유롭게 사용가능합니다."],
+        ["illustrator__icon.svg", "Adobe Illustrator", "로고디자인이 가능하며 SVG이미지를 코드와 연결하여 사용할 수 있습니다."],
+    ];
+
+    $("#circle_bar .Cbox").click(function(){
+        console.log("클릭이벤트")
+        var $index = $(this).index();
+        $(".skills").addClass("openPop");
+        $(".dark_bg").addClass("active");
+        $(".popup").addClass("active");
+        $(".popup .popup_img").css("background-image",`url(./img/${$sk_arr[$index][0]}`);
+        $(".popup h3").text($sk_arr[$index][1]);
+        $(".popup p").text($sk_arr[$index][2]);
+    });
+
+
+    $(".dark_bg, .popup .close").click(function(){
+        $("body").removeClass("openPop");
+        $(".dark_bg").removeClass("active");
+        $(".popup").removeClass("active");
+    });
+
+
+    /*skills 동그라미 바 효과*/
     //stroke-dashoffset: calc(440 - 440 * 95 / 100);
 
     var startCount = 0;
@@ -381,6 +414,8 @@ $(document).ready(function(){
         }, 50);
     });
 
+
+    
 });
 
 /*portfolio*/
@@ -389,23 +424,23 @@ $(document).ready(function(){
 //["구분(Dsign, Publishing, Develop(php, ajax등), App(날씨))","이미지","타이틀", ["소스마크1","소스마크2", "소스마크3", ...], "내용", "사이트 링크 주소"]
 
 const portArr = [
-    ["Publishing", "img_01.png", "Kuliner", ["html.png","css.png"], "HTML/CSS/구글맵 연동을 이용한 Kuliner Restaurant 사이트 제작", "https://presto119.github.io/kuliner/"],
-    ["Publishing", "cakehouse.png", "Cakehouse", ["html.png","css.png"], "HTML/CSS/wow.js/구글맵 연동을 이용한 Cakehouse website renewal 디저트 사이트 제작", "https://presto119.github.io/CakeHouse/"],
-    ["Publishing", "img_04.png", "Cashmere", ["html.png","css.png","jquery_transparent.png"], "HTML/CSS/jQuery를 이용한 Cashmere website renewal 의류 사이트 제작", "https://presto119.github.io/CASHMERE/"],
+    ["Publishing", "img_01.png", "Kuliner", ["html.png","css.png"], "HTML/CSS/구글맵 연동을 이용한 Kuliner Restaurant 사이트 제작", "https://presto119.github.io/kuliner/",""],
+    ["Publishing", "cakehouse.png", "Cakehouse", ["html.png","css.png"], "HTML/CSS/wow.js/구글맵 연동을 이용한 Cakehouse website renewal 디저트 사이트 제작", "https://presto119.github.io/CakeHouse/",""],
+    ["Publishing", "img_04.png", "Cashmere", ["html.png","css.png","jquery_transparent.png"], "HTML/CSS/jQuery를 이용한 Cashmere website renewal 의류 사이트 제작", "https://presto119.github.io/CASHMERE/",""],
     //["Publishing", "img_03.png", "세종병원", ["html.png","css.png"], "HTML/CSS를 이용한 병원사이트 제작", "https://presto119.github.io/SejongHospital/"],
-    ["Publishing", "img_05.png", "Aisle", ["html.png","css.png"], "HTML/CSS/wow.js를 이용한 웨딩사이트 제작", "https://presto119.github.io/Aisle/"],
-    ["Publishing", "img_06.png", "B&O play", ["html.png","css.png"], "HTML/CSS를 이용한 제품 광고사이트", "https://presto119.github.io/B-O-play/"],
-    ["Publishing", "img_07.png", "Origin", ["html.png","css.png","jquery_transparent.png"], "HTML/CSS/jQuery를 이용한 Portfolio사이트 제작", "https://presto119.github.io/origin/"],
-    ["Publishing", "img_08.png", "InvestPlan", ["html.png","css.png", "jquery_transparent.png"], "HTML/CSS/jQuery를 이용한 투자회사 사이트 제작", "https://presto119.github.io/InvestPlan/"],
-    ["App", "img_09.png", "weatherApp", ["html.png","css.png", "jquery_transparent.png"], "jQuery/ajax를 이용하여 실시간 날씨 앱 제작", "https://presto119.github.io/weatherApp/"],
-    ["Develop", "img_10.png", "Battle of Jangsari", ["html.png","css.png","ajax_transparent.png"], "jQuery/ajax를 이용한 Battle of Jangsari 영화 사이트 제작","https://presto119.github.io/BattleOfJangsari/"],
-    ["Publishing", "img_11.png", "musicBox", ["html.png","css.png", "js.png"], "HTML/CSS/Javascript를 이용한 MusicBox website 음악 재생 사이트 제작", "https://presto119.github.io/musicBox/"],
-    ["Develop", "img_12.png", "Filmmakers", ["html.png","css.png","js.png", "Vuejs.png"], "Vue Component 기능을 이용한 오디션 사이트 제작", "https://presto119.github.io/audition/"],
-    ["SAP", "national_geographic.png", "National Geographic", ["html.png","css.png","js.png", "Vuejs.png"], "Vue router기능을 이용한 National Geographic", "https://presto119.github.io/ngeo2022/"],
-    ["Develop", "mychat.png", "My Chat", ["html.png","css.png", "js.png", "php.png"], "php를 이용한 채팅 앱 제작", "http://presto112.dothome.co.kr/chattingApp/"],
-    ["Publishing", "img_15.png", "adAge", ["html.png","css.png","js.png"], "Javascript BOM을 이용한 광고사이트 제작", "https://presto119.github.io/adAge/"],
-    ["Develop", "img_16.png", "OClass", ["html.png","css.png","js.png","jquery_transparent.png", "php.png"], "php를 이용한 클래스 사이트 제작", "http://presto112.dothome.co.kr/oclass/"],
-    ["Publishing", "kangol.png", "KANGOL", ["html.png","css.png","js.png","jquery_transparent.png", "php.png"], "기획 디자인 퍼블리싱까지 개인작업으로 제작한 KANGOL 가방 판매 사이트", "https://presto119.github.io/KANGOL/"],
+    ["Publishing", "img_05.png", "Aisle", ["html.png","css.png"], "HTML/CSS/wow.js를 이용한 웨딩사이트 제작", "https://presto119.github.io/Aisle/",""],
+    ["Publishing", "img_06.png", "B&O play", ["html.png","css.png"], "HTML/CSS를 이용한 제품 광고사이트", "https://presto119.github.io/B-O-play/",""],
+    ["Publishing", "img_07.png", "Origin", ["html.png","css.png","jquery_transparent.png"], "HTML/CSS/jQuery를 이용한 Portfolio사이트 제작", "https://presto119.github.io/origin/",""],
+    ["Publishing", "img_08.png", "InvestPlan", ["html.png","css.png", "jquery_transparent.png"], "HTML/CSS/jQuery를 이용한 투자회사 사이트 제작", "https://presto119.github.io/InvestPlan/",""],
+    ["App", "img_09.png", "weatherApp", ["html.png","css.png", "jquery_transparent.png"], "jQuery/ajax를 이용하여 실시간 날씨 앱 제작", "https://presto119.github.io/weatherApp/",""],
+    ["Develop", "img_10.png", "Battle of Jangsari", ["html.png","css.png","ajax_transparent.png"], "jQuery/ajax를 이용한 Battle of Jangsari 영화 사이트 제작","https://presto119.github.io/BattleOfJangsari/",""],
+    ["Publishing", "img_11.png", "musicBox", ["html.png","css.png", "js.png"], "HTML/CSS/Javascript를 이용한 MusicBox website 음악 재생 사이트 제작", "https://presto119.github.io/musicBox/",""],
+    ["Develop", "img_12.png", "Filmmakers", ["html.png","css.png","js.png", "Vuejs.png"], "Vue Component 기능을 이용한 오디션 사이트 제작", "https://presto119.github.io/audition/",""],
+    ["SAP", "national_geographic.png", "National Geographic", ["html.png","css.png","js.png", "Vuejs.png"], "Vue router기능을 이용한 National Geographic", "https://presto119.github.io/ngeo2022/",""],
+    ["Develop", "mychat.png", "My Chat", ["html.png","css.png", "js.png", "php.png"], "php를 이용한 채팅 앱 제작", "http://presto112.dothome.co.kr/chattingApp/",""],
+    ["Publishing", "img_15.png", "adAge", ["html.png","css.png","js.png"], "Javascript BOM을 이용한 광고사이트 제작", "https://presto119.github.io/adAge/",""],
+    ["Develop", "img_16.png", "OClass", ["html.png","css.png","js.png","jquery_transparent.png", "php.png"], "php를 이용한 클래스 사이트 제작", "http://presto112.dothome.co.kr/oclass/",""],
+    ["Publishing", "kangol.png", "KANGOL", ["html.png","css.png","js.png","jquery_transparent.png", "php.png"], "기획 디자인 퍼블리싱까지 개인작업으로 제작한 KANGOL 가방 판매 사이트", "https://presto119.github.io/KANGOL/", `<a href="./work/KANGOLsiteProcessFile.pdf" target="_blank">Process</a>`],
     
 ];
 
@@ -437,6 +472,7 @@ portArr.forEach((v, i, a) => {
                         <p>${v[4]}</p>
                         <div class="detail_btn">
                             <a href="${v[5]}" target="_blank">Detial More</a>
+                            ${v[6]}
                         </div>
                     </div>
                 </div>
@@ -484,11 +520,18 @@ ctrlBtn.addEventListener("click", () =>{
 
 
 
-/*contact*/
+
 $(document).ready(function(){
+    /*contact*/
     $(".typed").typed({
         strings: ["Thank you!", "감사합니다!"],
         typeSpeed: 200,
         loop: true,
     });
+
+
 });
+
+
+
+
