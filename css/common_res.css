@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+@media(max-width:1400px){
+    .about .profile_box{
+        height: 65%;
+        flex-direction: column;
+    }
+    .about .profile_box .profile_part{width: 100%;}
+    .about .profile_box .about_part{width: 100%;}
+    .about .profile_box .profile_part .img{display: none;}
+}
+
+@media(max-width:1200px){
+    .intro .wrap{width: 100%; padding: 0 20px;}
+    .intro .card{display: none;}
+    .contactMe .wrap{width: 100%;}
+    .contact fieldset .formlist ul li{
+        flex-direction: column;
+    }
+    .contact fieldset .formlist ul li .inputbox{
+        width: 100%;
+    }
+    .contact fieldset .formlist ul li .inputbox textarea{
+        height: 200px;
+    }
+    .contact fieldset .formlist .btn_box{text-align: center;}
+
+    .contactMe .sns_part{
+    }
+    .contactMe .sns ul{
+        flex-direction: column;
+    }
+    .contactMe .w_line{display: none;}
+    .contactMe .sns ul li a{width: 150px; height: 50px;}
+
+    #circle_bar{width: 95%;}
+}
+
+@media(max-width:991px){
+    .about .profile_box{
+        width: 90%;
+    }
+    .about .profile_box .about_part{font-size: 16px;}
+    .about .profile_box .about_part .bottom{
+        display: flex;
+        flex-direction: column;
+    }
+    .about .profile_box .about_part .bottom .left{
+        padding-bottom: 20px;
+    }
+}
+
+@media(max-width:767px){
+
+    /*commen*/
+    body.showMenu{overflow: hidden;}
+
+    main .box{height: auto;}
+
+    main .box > div{
+        position: static;
+        width: 100%; height: auto;
+        min-height:100vh;
+        transform:none ! important;      
+        opacity:1;
+        transition: none;
+    }
+
+    /*header*/
+    header .menu_btn{display: block;}
+    header ul{
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%; height: 100%;
+        height: calc(100vh - 110px);
+        background-color: rgba(0,0,0,0.7);
+        z-index: -1; opacity: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+    header ul.active{
+        z-index: 2;
+        opacity: 1;
+        display: flex;
+        transition: opacity 0.5s;
+    }
+    header ul li{
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+    header ul li:hover{background-color: rgba(255, 255, 255, 0.5); }
+    header ul li a{
+        line-height: 80px;
+    }
+    header ul li.active a{color:#fe9090;}
+
+    /*.intro*/
+    .intro .wrap{position: static;}
+    .intro .wrap h1{
+        font-size: 80px;
+    }
+
+    /*about*/
+
+
+    /*.skills*/
+
+    /*.portfolio*/
+
+    /*.contactMe*/
+    .contact{display: none;}
+    .contactMe .wrap span.typed{display: none;}
+    .contactMe .sns ul li:last-child{display: block;}
+    .contactMe .sns p{display: block;}
+}

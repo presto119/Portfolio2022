@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - NaGaBin</title>
+    <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/common_res.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="blob">
+                <svg viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                    <g transform="translate(193, -75)">
+                      <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" style="stop-color: rgb(238, 205, 163);"></stop>
+                          <stop offset="100%" style="stop-color: rgb(239, 98, 159);"></stop>
+                        </linearGradient>
+                      </defs>
+                      <path fill="url(#gradient)">
+                        <animate
+                            attributeName="d"
+                            dur="10000ms"
+                            repeatCount="indefinite"
+                            
+                            values="M393,352.5Q369,455,267.5,425Q166,395,126,322.5Q86,250,124.5,174.5Q163,99,241.5,113.5Q320,128,368.5,189Q417,250,393,352.5Z;
+                            
+                            M375,283Q288,316,244.5,325.5Q201,335,125,292.5Q49,250,107,176.5Q165,103,257,91Q349,79,405.5,164.5Q462,250,375,283Z;
+                            
+                            M368.5,290.5Q297,331,254.5,323.5Q212,316,139,283Q66,250,108.5,164Q151,78,231.5,110Q312,142,376,196Q440,250,368.5,290.5Z;
+                            
+                            M357.5,354Q370,458,264.5,432.5Q159,407,160,328.5Q161,250,149.5,153Q138,56,226,97.5Q314,139,329.5,194.5Q345,250,357.5,354Z;
+                            
+                            M406,335Q348,420,242.5,433Q137,446,126,348Q115,250,125,150Q135,50,226.5,91Q318,132,391,191Q464,250,406,335Z;
+                            
+                            M356.5,293Q300,336,224,381.5Q148,427,129.5,338.5Q111,250,137,175Q163,100,247,104.5Q331,109,372,179.5Q413,250,356.5,293Z;
+                            
+                            M393,352.5Q369,455,267.5,425Q166,395,126,322.5Q86,250,124.5,174.5Q163,99,241.5,113.5Q320,128,368.5,189Q417,250,393,352.5Z;"/>
+                      </path>
+                    </g>
+                </svg>
+            </div>
+            <a href="./">
+                <img src="./img/logo.svg" alt="">
+            </a>
+        </div>
+
+        <div class="menu_btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="menu">
+            <li class="introBtn active"><a href="">INTRO</a></li>
+            <li class="aboutBtn"><a href="">ABOUT</a></li>
+            <li class="skillsBtn"><a href="">SKILLS</a></li>
+            <li class="portfolioBtn"><a href="">PORTFOLIO</a></li>
+            <li class="contactBtn"><a href="">CONTACT</a></li>
+        </ul>
+    </header>
+    <!--
+        [Full page slider의 구성조건]
+        1. 각 섹션파트의 공간은 w100%, h100vh로 설정해야 한다.
+        2. 마우스 휠을 돌렸을 때, 다음 페이지로 내려가거나 또는 이전 페이지로 올라가야 한다.
+        (자석처럼 화면의 전면이 이동하여야 한다.) - mousewheel 이벤트
+    -->
+
+    <main>
+        <section class="box intro active">
+            <div>
+                <div class="wrap">
+                    <div class="title_box">
+                        <h1 class="title1">WEB PUBLISHER</h1>
+                        <h1 class="title2"><span>Gabin's</span> Portfolio</h1>
+                    </div>
+                    <div class="srlDown">
+                        <span class="srlMove"></span>
+                    </div>
+                    <p>Scroll Down</p>
+
+                    <div class="card">
+                        <div class="front"><img src="./img/profile.jpg"></div>
+                        <div class="back">
+                            <img src="./img/profile_photo.png" alt="">
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </section>
+        <section class="box about">
+            <div class="bg">
+                <h2>About Me!</h2>
+                <div class="profile_box">
+                    <div class="profile_part">
+                        <div class="img"></div>
+                        <h3>나가빈</h3>
+                        <p>1993.07.07</p>
+                    </div>
+                    <div class="about_part">
+                        <div class="top">
+                            <p>
+                                안녕하세요! 신입 웹 퍼블리셔 나가빈 입니다.
+                                멀티미디어과를 전공하여, 다양한 디자인 툴을 사용할 수 있으며, 코딩을 통해 여러가지 멋진 디자인을 웹으로 구현할 수 있게 되었습니다.
+                                사용자와 클라이언트, 개발자 모두가 만족할 수 있는 능력있는 웹 개발자가 되는 것이 목표입니다.
+                                의지가 되고 내 몫 이상을 해내는 웹 퍼블리셔가 되겠습니다.
+                            </p>
+                        </div>
+                        <div class="bottom">
+                            <div class="left">
+                                <span>기본정보</span>
+                                <p>
+                                    휴대폰 : 010-9624-7227<br>
+                                    사는곳 : 안산시 상록구<br>
+                                    좌우명 : 늘 갈망하고 바보처럼 도전하라
+                                </p>
+                            </div>
+                            <div class="right">
+                                <span>교육</span>
+                                <p>
+                                    - 학점은행제 멀티미디어학과 전공<br>
+                                    - 하이미디어아카데미 UI/UX 웹디자인&웹퍼블리셔 수료
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="box skills">
+            <div>
+                <div id="circle_bar">
+                    <div class="frame">
+                        <div class="Cbox bx1">
+                            <div class="cont">
+                                <div class="top">
+                                    <svg>
+                                        <circle cx="70" cy="70" r="70"/>
+                                        <circle cx="70" cy="70" r="70"/>
+                                    </svg>
+                                    <div class="num">
+                                        <h2>
+                                            <span class="count" data-limit="90">0</span>
+                                            <span>%</span>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <h2 class="cont_text">HTML5</h2>
+                                    <img src="./img/html.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="Cbox bx2">
+                            <div class="cont">
+                                <div class="top">
+                                    <svg>
+                                        <circle cx="70" cy="70" r="70"/>
+                                        <circle cx="70" cy="70" r="70"/>
+                                    </svg>
+                                    <div class="num">
+                                        <h2>
+                                            <span class="count" data-limit="85">0</span>
+                                            <span>%</span>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <h2 class="cont_text">CSS3</h2>
+                                    <img src="./img/css.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="Cbox bx3">
+                            <div class="cont">
+                                <div class="top">
+                                    <svg>
+                                        <circle cx="70" cy="70" r="70"/>
+                                        <circle cx="70" cy="70" r="70"/>
+                                    </svg>
+                                    <div class="num">
+                                        <h2>
+                                            <span class="count" data-limit="78">0</span>
+                                            <span>%</span>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <h2 class="cont_text">Javascript / jQuery</h2>
+                                    <div class="img_part">
+                                        <img src="./img/js.png" alt="">
+                                        <img class="jquery" src="./img/jQurey1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="Cbox bx4">
+                            <div class="cont">
+                                <div class="top">
+                                    <svg>
+                                        <circle cx="70" cy="70" r="70"/>
+                                        <circle cx="70" cy="70" r="70"/>
+                                    </svg>
+                                    <div class="num">
+                                        <h2>
+                                            <span class="count" data-limit="65">0</span>
+                                            <span>%</span>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <h2 class="cont_text">php</h2>
+                                    <img src="./img/php.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="Cbox bx5">
+                            <div class="cont">
+                                <div class="top">
+                                    <svg>
+                                        <circle cx="70" cy="70" r="70"/>
+                                        <circle cx="70" cy="70" r="70"/>
+                                    </svg>
+                                    <div class="num">
+                                        <h2>
+                                            <span class="count" data-limit="65">0</span>
+                                            <span>%</span>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <h2 class="cont_text">Bootstrap</h2>
+                                    <img src="./img/bootstrap.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Cbox bx6">
+                            <div class="cont">
+                                <div class="top">
+                                    <svg>
+                                        <circle cx="70" cy="70" r="70"/>
+                                        <circle cx="70" cy="70" r="70"/>
+                                    </svg>
+                                    <div class="num">
+                                        <h2>
+                                            <span class="count" data-limit="65">0</span>
+                                            <span>%</span>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <h2 class="cont_text">Vue js</h2>
+                                    <img src="./img/Vuejs.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Cbox bx7">
+                            <div class="cont">
+                                <div class="top">
+                                    <svg>
+                                        <circle cx="70" cy="70" r="70"/>
+                                        <circle cx="70" cy="70" r="70"/>
+                                    </svg>
+                                    <div class="num">
+                                        <h2>
+                                            <span class="count" data-limit="90">0</span>
+                                            <span>%</span>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <h2 class="cont_text">Adobe Photoshop</h2>
+                                    <img src="./img/photoshop_icon.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Cbox bx8">
+                            <div class="cont">
+                                <div class="top">
+                                    <svg>
+                                        <circle cx="70" cy="70" r="70"/>
+                                        <circle cx="70" cy="70" r="70"/>
+                                    </svg>
+                                    <div class="num">
+                                        <h2>
+                                            <span class="count" data-limit="80">0</span>
+                                            <span>%</span>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <h2 class="cont_text">Adobe Illustrator</h2>
+                                    <img src="./img/illustrator__icon.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="box portfolio">
+            <div>
+                <div class="wrap">
+                    <video class="bg_video" src="./video/background2.mp4" autoplay loop playsinline muted></video>
+                    <section id="circling">
+                        <article class="surface1" style="--i:1">
+                            <h1>Publish</h1>
+                            <div class="inner">
+                                <div class="space">
+                                    <div class="web_img"></div>
+                                    <div class="web_info">
+                                        <div class="top">
+                                            <h3>세종병원 웹사이트</h3>
+                                            <ul>
+                                                <li><img src="./img/html5.png" alt=""></li>
+                                                <li><img src="./img/css-3.png" alt=""></li>
+                                            </ul>
+                                        </div>
+                                        <div class="bottom">
+                                            <p>세종병원 리뉴얼 홈페이지 제작</p>
+                                            <p>UI 관점에서 효율성을 극대화한 웹사이트 제작</p>
+                                            <div class="detail_btn">
+                                                <a href="">Detial More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="surface2" style="--i:2">
+                            <h1>Publish</h1>
+                            <div class="inner">
+                                <div class="space">
+                                    <div class="web_img"></div>
+                                    <div class="web_info">
+                                        <div class="top">
+                                            <h3>B&O Play - website</h3>
+                                            <ul>
+                                                <li><img src="./img/html5.png" alt=""></li>
+                                                <li><img src="./img/css-3.png" alt=""></li>
+                                            </ul>
+                                        </div>
+                                        <div class="bottom">
+                                            <p>B&O 제품 소개 페이지</p>
+                                            <p>UX 관점에서 접근하여 BI의 파급효과</p>
+                                            <div class="detail_btn">
+                                                <a href="">Detial More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="surface3" style="--i:3">
+                            <h1>Publish</h1>
+                            <div class="inner">
+                                <div class="space"></div>
+                            </div>
+                        </article>
+                        <article class="surface4" style="--i:4">
+                            <h1>Publish</h1>
+                            <div class="inner">
+                                <div class="space"></div>
+                            </div>
+                        </article>
+                        <article class="surface5" style="--i:5">
+                            <h1>Publish</h1>
+                            <div class="inner">
+                                <div class="space"></div>
+                            </div>
+                        </article>
+                        <article class="surface6" style="--i:6">
+                            <h1>Publish</h1>
+                            <div class="inner">
+                                <div class="space"></div>
+                            </div>
+                        </article>
+                        <article class="surface7" style="--i:7">
+                            <h1>Publish</h1>
+                            <div class="inner">
+                                <div class="space"></div>
+                            </div>
+                        </article>
+                        <article class="surface8" style="--i:8">
+                            <h1>Publish</h1>
+                            <div class="inner">
+                                <div class="space"></div>
+                            </div>
+                        </article>
+                    </section>
+
+                    <div class="controlBtn">
+                        <img src="./img/pause.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="box contactMe">
+            <div>
+                <div class="wrap">
+                    <div class="contact">
+                        <h2>Contact Me</h2>
+                        <form class="gform form-elements" name="contactUs" method="post" action="https://script.google.com/macros/s/AKfycbwl8hlADcwZj_rWd59Zn7dsLUj3d5jLucfQA9eH/exec">
+                            <fieldset>
+                                <legend>구글 메일 발송</legend>
+                                <div class="formlist">
+                                    <ul>
+                                        <li>
+                                            <label for="name">이름 또는 회사명<sup>*</sup></label>
+                                            <span class="inputbox">
+                                                <input type="text" id="name" name="name" placeholder="이름 또는 회사명을 입력해주세요" required autocomplete="off">
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <label for="email">답변받을 이메일<sup>*</sup></label>
+                                            <span class="inputbox">
+                                                <input type="email" id="email" name="email" placeholder="prestoq0p@gmail.com" required autocomplete="off">
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <label for="message">문의 내용<sup>*</sup></label>
+                                            <span class="inputbox">
+                                                <textarea name="message" id="message" placeholder="문의 사항을 입력해 주세요." required autocomplete="off"></textarea>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <div class="btn_box">
+                                        <button type="submit" class="command_btn">문의하기</button>
+                                    </div>
+                                </div>
+                
+                                <div class="thankyou_message">
+                                    <article>
+                                        <h1>작성된 내용이 모두 전송되었습니다.</h1>
+                                        <p>메일 확인 후 연락드리겠습니다.</p>
+                                        <div class="btn_box">
+                                            <a href="" class="close">닫기</a>
+                                        </div>
+                                    </article>
+                                </div>
+                            
+                            </fieldset>
+                        </form>
+                        <span class="comment">작성하신 내용은 메일로 전송됩니다.</span>
+                    </div>
+                    
+                    <div class="sns_part">
+                        <div class="w_line"></div>
+                        <div class="sns">
+                            <ul>
+                                <li><a href="https://github.com/presto119"><img src="./img/github_icon.svg" alt=""></a></li>
+                                <li><a href=""><img src="./img/resume_icon.svg" alt=""></a></li>
+                                <li><a href=""><img src="./img/kakao_talk.svg" alt=""></a></li>
+                                <li><a href=""><img src="./img/at-solid.svg" alt=""></a></li>
+                            </ul>
+                            <p>Thank you!</p>
+                        </div>
+                        
+                        <span class="typed"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/typed.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
