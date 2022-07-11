@@ -468,6 +468,7 @@ body.openPop{overflow-y: hidden;}
     font-size: 16px; 
     color:#fe9090;
     word-break: keep-all;
+    line-height: 24px;
 }
 
 
@@ -694,6 +695,7 @@ body.openPop{overflow-y: hidden;}
 .contactMe .wrap h2{
     font-size: 24px;
     color: #ff5c5c;
+    padding-bottom: 20px;
 }
 
 .contact{
